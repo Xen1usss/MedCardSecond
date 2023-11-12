@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import medcard.second.R
 import medcard.second.ViewModelForFragmentA
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class FragmentForActivityA : Fragment() {
@@ -16,7 +17,7 @@ class FragmentForActivityA : Fragment() {
         fun newInstance() = FragmentForActivityA()
     }
 
-    private lateinit var viewModel: ViewModelForFragmentA
+    private val viewModel: ViewModelForFragmentA by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,12 +26,9 @@ class FragmentForActivityA : Fragment() {
         return inflater.inflate(R.layout.fragment_for_activity_a, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(
-            ViewModelForFragmentA::class.java
-        )
-        // TODO: Use the ViewModel
+    override fun onResume() {
+        super.onResume()
+            viewModel.log()
     }
 
 }

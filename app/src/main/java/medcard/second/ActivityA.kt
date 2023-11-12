@@ -9,9 +9,5 @@ class ActivityA : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_a)
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.placeForFragments, FragmentForActivityA.newInstance())
-            .commit()
     }
 }
