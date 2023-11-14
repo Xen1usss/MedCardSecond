@@ -2,7 +2,6 @@ package medcard.second
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import medcard.second.fragment.FragmentForActivityA
 
 class ActivityA : AppCompatActivity() {
 

@@ -5,16 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import medcard.second.R
 import medcard.second.ViewModelForFragmentA
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-class FragmentForActivityA : Fragment() {
+class FragmentAForActivityA : Fragment() {
 
     companion object {
-        fun newInstance() = FragmentForActivityA()
+        fun newInstance() = FragmentAForActivityA()
     }
 
     private val viewModel: ViewModelForFragmentA by viewModel()
