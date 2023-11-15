@@ -27,7 +27,7 @@ class FragmentAForActivityA : Fragment() {
 
     override fun onResume() {
         super.onResume()
-            viewModel.log()
+        viewModel.log()
     }
 
 }
