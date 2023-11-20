@@ -12,10 +12,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FragmentAForActivityA : Fragment() {
 
-    companion object {
-        fun newInstance() = FragmentAForActivityA()
-    }
-
     private val viewModel: ViewModelForFragmentA by viewModel()
 
     override fun onCreateView(
