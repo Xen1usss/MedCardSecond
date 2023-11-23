@@ -10,3 +10,9 @@ class ActivityA : AppCompatActivity() {
         setContentView(R.layout.activity_a)
     }
 }
+
+<fragment
+android:name="medcard.second.fragment.FragmentAForActivityA"
+android:id="@+id/placeForFragments"
+android:layout_width="match_parent"
+android:layout_height="match_parent" />
