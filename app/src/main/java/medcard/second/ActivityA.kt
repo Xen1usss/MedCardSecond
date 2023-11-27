@@ -11,8 +11,3 @@ class ActivityA : AppCompatActivity() {
     }
 }
 
-<fragment
-android:name="medcard.second.fragment.FragmentAForActivityA"
-android:id="@+id/placeForFragments"
-android:layout_width="match_parent"
-android:layout_height="match_parent" />
