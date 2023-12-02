@@ -9,4 +9,8 @@
         android:name="medcard.second.fragment.FragmentAForActivityA"
         android:label="fragment_for_activity_a"
         tools:layout="@layout/fragment_for_activity_a" />
+    <fragment
+        android:id="@+id/fragmentBForActivityA3"
+        android:name="medcard.second.fragment.FragmentBForActivityA"
+        android:label="FragmentBForActivityA" />
 </navigation>
