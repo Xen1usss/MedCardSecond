@@ -7,7 +7,7 @@ class ActivityA : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        lateinit var binding
+        lateinit var binding: ActivityA
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_a)
