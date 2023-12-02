@@ -8,9 +8,17 @@
         android:id="@+id/fragmentAForActivityA"
         android:name="medcard.second.fragment.FragmentAForActivityA"
         android:label="fragment_for_activity_a"
-        tools:layout="@layout/fragment_for_activity_a" />
+        tools:layout="@layout/fragment_for_activity_a" >
+        <action
+            android:id="@+id/action_fragmentAForActivityA_to_fragmentBForActivityA5"
+            app:destination="@id/fragmentBForActivityA5" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentBForActivityA5"
         android:name="medcard.second.fragment.FragmentBForActivityA"
-        android:label="FragmentBForActivityA" />
+        android:label="FragmentBForActivityA" >
+        <action
+            android:id="@+id/action_fragmentBForActivityA5_to_fragmentAForActivityA"
+            app:destination="@id/fragmentAForActivityA" />
+    </fragment>
 </navigation>
