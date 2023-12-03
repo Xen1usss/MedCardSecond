@@ -13,6 +13,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class FragmentAForActivityA : Fragment() {
 
     private val viewModel: ViewModelForFragmentA by viewModel()
+    lateinit var binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
