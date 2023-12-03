@@ -1,18 +1,22 @@
 package medcard.second
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import medcard.second.databinding.ActivityABinding
 
 class ActivityA : AppCompatActivity() {
 
+    private lateinit var binding: ActivityABinding
+    lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_a)
+        binding = ActivityABinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        navController = Navigation.findNavController(this, R.id.navigation_host_container_for_fragments)
     }
 }
 
-<fragment
-android:name="medcard.second.fragment.FragmentAForActivityA"
-android:id="@+id/placeForFragments"
-android:layout_width="match_parent"
-android:layout_height="match_parent" />
