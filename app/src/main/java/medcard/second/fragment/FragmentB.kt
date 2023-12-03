@@ -5,22 +5,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import medcard.second.R
-import medcard.second.databinding.FragmentBForActivityABinding
+import medcard.second.databinding.FragmentBBinding
 
-class FragmentBForActivityA : Fragment() {
+class FragmentB : Fragment() {
 
     //здесь был онкриейт - почему?
 
-    lateinit var binding: FragmentBForActivityABinding
+    private var binding: FragmentBBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentBForActivityABinding.inflate(layoutInflater, container, false )
-        return binding.root
+        binding = FragmentBBinding.inflate(layoutInflater, container, false )
+        return binding?.root
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
 
 }

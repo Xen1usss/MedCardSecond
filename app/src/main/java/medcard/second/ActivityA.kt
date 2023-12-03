@@ -9,25 +9,14 @@ import medcard.second.databinding.ActivityABinding
 
 class ActivityA : AppCompatActivity() {
 
+    private lateinit var binding: ActivityABinding
+    lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        lateinit var binding: ActivityABinding // почему не сразу присваиваем? //почему ругается на private?
-        lateinit var navController: NavController
-
         super.onCreate(savedInstanceState)
-        binding = ActivityABinding.inflate(layoutInflater) //я не понимаю, что присвоили тут
-        val view = binding.root //типа родительский элемент, но от чего
-        setContentView(view) //обязательно ли переносить в отдельную переменную binding.root?
+        binding = ActivityABinding.inflate(layoutInflater)
+        setContentView(binding.root)
         navController = Navigation.findNavController(this, R.id.navigation_host_container_for_fragments)
-
-        MAIN = this
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
-        super.onViewCreated(view, savedInstanceState)
-        val binding
-        binding.button_next
-    }
-
 }
 
