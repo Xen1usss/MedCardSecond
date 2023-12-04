@@ -19,4 +19,3 @@ class ActivityA : AppCompatActivity() {
         navController = Navigation.findNavController(this, R.id.navigation_host_container_for_fragments)
     }
 }
-

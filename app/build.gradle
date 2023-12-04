@@ -36,8 +36,10 @@ android {
 
 dependencies {
 
-    implementation "androidx.navigation:navigation-fragment-ktx:2.7.5" //подключение navigation
-    implementation "androidx.navigation:navigation-ui-ktx:2.7.5" //подключение navigation
+    def a = "2.7.5"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$a" //подключение navigation
+    implementation "androidx.navigation:navigation-ui-ktx:$a" //подключение navigation
 
     implementation "io.insert-koin:koin-android:3.5.0"
     implementation 'androidx.appcompat:appcompat:1.6.1'
