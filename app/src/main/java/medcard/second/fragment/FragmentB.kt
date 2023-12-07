@@ -11,8 +11,6 @@ import medcard.second.databinding.FragmentBBinding
 
 class FragmentB : Fragment() {
 
-    //здесь был онкриейт - почему?
-
     private var binding: FragmentBBinding? = null
 
     override fun onCreateView(
