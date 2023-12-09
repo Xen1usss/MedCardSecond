@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import medcard.second.R
 
-class ExperimentalFragment constructor(binding: ) : Fragment() {
+class ExperimentalFragment constructor(binding: ) : Fragment() { //класс, в котором нужно прописать свойства и логику
 
     protected var binding = null
 }
