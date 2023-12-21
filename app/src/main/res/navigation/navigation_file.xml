@@ -6,7 +6,7 @@
     app:startDestination="@id/fragmentA">
     <fragment
         android:id="@+id/fragmentA"
-        android:name="medcard.second.fragment.FragmentA"
+        android:name="medcard.second.ui.a.FragmentA"
         android:label="fragment_a"
         tools:layout="@layout/fragment_a" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentB"
-        android:name="medcard.second.fragment.FragmentB"
+        android:name="medcard.second.ui.b.FragmentB"
         android:label="fragmentB"
         tools:layout="@layout/fragment_b">
         <action

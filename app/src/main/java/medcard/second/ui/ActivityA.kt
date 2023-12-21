@@ -1,10 +1,10 @@
-package medcard.second
+package medcard.second.ui
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import medcard.second.R
 import medcard.second.databinding.ActivityABinding
 
 class ActivityA : AppCompatActivity() {
@@ -16,6 +16,8 @@ class ActivityA : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityABinding.inflate(layoutInflater)
         setContentView(binding.root)
-        navController = Navigation.findNavController(this, R.id.navigation_host_container_for_fragments)
+        navController = Navigation.findNavController(this,
+            R.id.navigation_host_container_for_fragments
+        )
     }
 }

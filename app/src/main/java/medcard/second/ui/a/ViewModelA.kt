@@ -1,8 +1,8 @@
-package medcard.second
+package medcard.second.ui.a
 
 import androidx.lifecycle.ViewModel
 
-class ViewModelForFragmentA(val test:String) : ViewModel() {
+class ViewModelA(val test:String) : ViewModel() {
 
     fun log(){
         println("AAAAAAAAAAA $test")

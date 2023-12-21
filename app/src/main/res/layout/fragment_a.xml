@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FragmentA">
+    tools:context=".ui.a.FragmentA">
 
     <TextView
         android:id="@+id/textView"
