@@ -12,18 +12,12 @@ import medcard.second.databinding.FragmentABinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-class FragmentA : Fragment() {
+class FragmentA : BaseFragment<FragmentABinding, ViewModelForFragmentA>() {
 
-    private val viewModel: ViewModelForFragmentA by viewModel()
-    private var binding: FragmentABinding? = null
+    override val viewModel: ViewModelForFragmentA by viewModel()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentABinding.inflate(inflater, container, false)
-        return binding?.root
-    }
+    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentABinding =
+        FragmentABinding::inflate
 
     override fun onResume() {
         super.onResume()
@@ -32,14 +26,8 @@ class FragmentA : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.buttonNext?.setOnClickListener {
+        binding.buttonNext.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentA_to_fragmentB)
         }
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
-    }
-
 }
