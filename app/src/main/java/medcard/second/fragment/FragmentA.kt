@@ -12,9 +12,10 @@ import medcard.second.databinding.FragmentABinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-class FragmentA : BaseFragment<FragmentABinding>() {
+class FragmentA : BaseFragment<FragmentABinding, ViewModelForFragmentA>() {
 
-    private val viewModel: ViewModelForFragmentA by viewModel()
+    override val viewModel: ViewModelForFragmentA by viewModel()
+
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentABinding =
         FragmentABinding::inflate
 

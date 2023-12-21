@@ -8,11 +8,14 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import medcard.second.R
 import medcard.second.ViewModelForFragmentA
+import medcard.second.ViewModelForFragmentB
 import medcard.second.databinding.FragmentABinding
 import medcard.second.databinding.FragmentBBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class FragmentB : BaseFragment<FragmentBBinding>() {
+class FragmentB : BaseFragment<FragmentBBinding, ViewModelForFragmentB>() {
+
+    override val viewModel: ViewModelForFragmentB by viewModel()
 
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentBBinding =
         FragmentBBinding::inflate
