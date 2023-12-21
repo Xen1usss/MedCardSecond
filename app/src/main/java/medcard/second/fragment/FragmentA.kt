@@ -15,14 +15,16 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class FragmentA : Fragment() {
 
     private val viewModel: ViewModelForFragmentA by viewModel()
-    private var binding: FragmentABinding? = null
+    private var _binding: FragmentABinding? = null
+    private val binding: FragmentABinding
+    get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentABinding.inflate(inflater, container, false)
-        return binding?.root
+    ): View {
+        _binding = FragmentABinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onResume() {
@@ -32,14 +34,14 @@ class FragmentA : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.buttonNext?.setOnClickListener {
+        binding.buttonNext.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentA_to_fragmentB)
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        binding = null
+        _binding = null
     }
 
 }
