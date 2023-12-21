@@ -7,5 +7,4 @@ class ViewModelForFragmentA(val test:String) : ViewModel() {
     fun log(){
         println("AAAAAAAAAAA $test")
     }
-
 }
