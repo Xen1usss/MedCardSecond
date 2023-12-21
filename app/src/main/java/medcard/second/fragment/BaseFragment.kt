@@ -18,7 +18,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = bindingInflater.invoke(inflater, container, false)
+        _binding = bindingInflater(inflater, container, false)
         return binding.root
     }
 
